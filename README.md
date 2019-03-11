@@ -6,6 +6,8 @@ a Simple Weather library for OpenWeatherMap
 
 [Demo2](https://raw.githack.com/yui0/weather-owm/master/sample.html)
 
+[Demo3](https://raw.githack.com/yui0/weather-owm/master/sample2.html)
+
 ## References
 
 - https://github.com/erikflowers/weather-icons

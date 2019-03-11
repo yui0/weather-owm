@@ -4,35 +4,9 @@
   <meta charset="UTF-8">
   <title>Weather Application</title>
   
-  <link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
-  <!--<link href="css/weather-icons.min.css" rel="stylesheet">-->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" rel="stylesheet">
-
-<style>
-/*@font-face {
-  font-family: 'weather';
-  src: url('./font/weathericons-regular-webfont.eot');
-  src: url('./font/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('./font/weathericons-regular-webfont.woff2') format('woff2'), url('./font/weathericons-regular-webfont.woff') format('woff'), url('./font/weathericons-regular-webfont.ttf') format('truetype'), url('./font/weathericons-regular-webfont.svg#weather_iconsregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}*/
-
-#weather {
-  margin: 0px auto;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-i {
-  color: #CCCC33;
-  font-family: weathericons;
-  font-size: 70px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.0;
-  text-transform: none;
-}
-</style>
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+  <link rel="stylesheet" href="weather-owm.css">
 
   <script src='weather-owm.js'></script>
   <script>
@@ -43,7 +17,7 @@ i {
       unit: 'c',
       success: function(weather) {
        //$('weather').innerHTML = '<p><i class="icon-'+weather.code+'"><\/i><ons-icon icon="ion-play"><\/ons-icon><i class="icon-'+weather.forecast[0].code+'"><\/i>'+weather.temp+'℃ '+weather.currently+' '+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'<\/p>';
-        $('weather').innerHTML = '<p><i class="'+weather.icon+'"><\/i><i class="icon ion-md-play" style="font-size:150%;"><\/i><i class="'+weather.forecast[0].icon+'"><\/i>'+weather.temp+'℃ '+weather.currently+' '+weather.wind.direction+' '+weather.wind.speed+' m/s '+weather.pressure+' hPa<\/p>';
+        $('weather').innerHTML = '<p><i class="'+weather.icon+'"><\/i><i class="icon ion-md-play" style="font-size:150%"><\/i><i class="'+weather.forecast[0].icon+'"><\/i>'+weather.temp+'℃ '+weather.currently+' '+weather.wind.direction+' '+weather.wind.speed+' m/s '+weather.pressure+' hPa<\/p>';
       },
       error: function(e) {
         $('weather').innerHTML = '<p>'+e+'<\/p>';

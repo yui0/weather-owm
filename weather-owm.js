@@ -1,4 +1,5 @@
 // a Simple Weather library for OpenWeatherMap
+// ©2019 Yuichiro Nakada
 
 function $(e) { return document.getElementById(e); }
 
