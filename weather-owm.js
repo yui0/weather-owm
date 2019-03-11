@@ -18,10 +18,15 @@ var simpleWeather = {
     httpRequestAsync(searchLink, function (response) {
       let jsonObject = JSON.parse(response);
       weather.city = jsonObject.name;
-      weather.temp = parseInt(jsonObject.main.temp - 273);// + "°";
+      weather.temp = parseInt(jsonObject.main.temp - 273.15);// + "°";
       weather.humidity = jsonObject.main.humidity + "%";
-      weather.wind = jsonObject.wind.speed;
+      weather.pressure = jsonObject.main.pressure;
 
+      weather.wind = {};
+      weather.wind.speed = jsonObject.wind.speed;
+      weather.wind.direction = "";//jsonObject.wind.deg;
+
+      weather.currently = jsonObject.weather[0].main;
       let id = jsonObject.weather[0].id;
       let unixTime = Math.floor((new Date()).getTime() / 1000);
       if (jsonObject.sys.sunrise <= unixTime && unixTime <= jsonObject.sys.sunset) {
